@@ -6,7 +6,7 @@ pipeline {
         echo 'on build...'
       }
     }
-    stage('test') {
+    stage('Test') {
       steps {
         echo 'on test...'
       }
