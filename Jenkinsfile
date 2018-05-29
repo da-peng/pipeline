@@ -8,7 +8,9 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'ls'
                 echo 'Testing..'
+                junit 'reports/**/*.xml' 
             }
         }
         stage('Deploy') {
