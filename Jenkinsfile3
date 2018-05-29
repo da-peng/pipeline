@@ -1,1 +1,14 @@
 
+pipeline {
+	agent {
+		label 'node118'
+	}
+	stages {
+		stage('Build') {
+			steps {
+				sh "cd /home/gyenno/script/docker && docker-compose down"
+				sh "cd /home/gyenno/script/docker && docker-compose up -d"
+			}
+		}
+	}
+}
